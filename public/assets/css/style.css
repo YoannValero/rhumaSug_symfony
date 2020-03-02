@@ -1,0 +1,113 @@
+*{
+    padding:0;
+    margin:0;
+}
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+}
+div, h1 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+}
+
+.margin {
+    margin-bottom: 45px;
+}
+
+.bg-1 {
+    background-color: #1abc9c;
+    /* Green */
+    color: #ffffff;
+}
+
+.bg-2 {
+    background-color: #dbdbdb;
+    /* Dark Blue */
+    color: #555555;
+}
+
+.bg-3 {
+    background-color: #ffffff;
+    /* White */
+    color: #555555;
+    border:1px solid rgba(128, 128, 128, 0.096);
+  
+}
+
+.bg-4 {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.733) ), url(../images/rhumm.jpg) ;
+    
+    background-size:cover;
+    /* Black Gray */
+    color: #fff;
+}
+
+.bg-5 {
+    background-color: rgb(49, 49, 49);
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+#logo{
+    padding : 0;
+}
+
+input, textarea {
+    color:black;
+    padding:0;
+    margin: 0;
+}
+
+.article {
+
+height:auto;
+border:1px solid #ffffff49;
+margin-top:50px;
+padding:20px;
+}
+
+.show-action {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.group-action {
+    margin:15px;
+}
+form {
+    margin : 0 100px 0 100px;
+}
+.formNoMargin {
+    margin : 0;
+}
+
+.produit img {
+    width:200px;
+    height:200px;
+    object-fit: contain;
+}
+
+

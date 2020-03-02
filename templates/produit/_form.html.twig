@@ -1,0 +1,22 @@
+{{ form_start(form) }}
+<div class="container-fluid bg-2">
+    <table class='table'>
+
+        <tr>
+            {# {{ form_widget(form) }} #}
+            <td> {{ form_row(form.libelle, {'attr': {'class': 'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td> {{ form_row(form.img, {'attr': {'class' : 'form-control'}}) }} </td>
+        </tr>
+         <tr>
+            <td> {{ form_row(form.price, {'attr': {'class' : 'form-control'}}) }} </td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-success">{{ button_label|default('Save') }}</button></td>
+        </tr>
+    </table>
+</div>
+{{ form_end(form) }}
+
+    
