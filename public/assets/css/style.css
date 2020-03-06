@@ -1,7 +1,9 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
 *{
     padding:0;
     margin:0;
 }
+
 body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
@@ -53,7 +55,7 @@ p {
 }
 
 .container-fluid {
-    padding-top: 70px;
+    /* padding-top: 70px; */
     padding-bottom: 70px;
 }
 
@@ -108,6 +110,50 @@ form {
     width:200px;
     height:200px;
     object-fit: contain;
+}
+
+.navicon {
+    border:1px solid rgba(128, 128, 128, 0.219);
+    transition :0.5s ease;
+}
+.navicon:hover {
+    background-color: #1abc9c !important;
+}
+
+.header {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    padding:0;
+    margin:0;
+    background: linear-gradient( rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.575) ), url(/assets/images/b72726b2f933283b6a714e8592120f37-700.jpg) ;
+    background-size: contain 100%;
+    height:90vh;
+    background-attachment: scroll;
+    object-fit: cover;
+}
+
+.header h1 {
+    padding:50px;
+    color:white;
+}
+.animScale {
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-name: text;
+}
+
+@keyframes text {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1.0;
+    }
 }
 
 

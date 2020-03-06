@@ -4,14 +4,11 @@ namespace App\Controller;
 
 
 use App\Entity\Produit;
-use App\Entity\User;
 use App\Entity\Panier;
 use App\Repository\PanierRepository;
-use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+
 
 
 class PanierController extends AbstractController
@@ -69,8 +66,6 @@ class PanierController extends AbstractController
             $manager->remove($panier);
             $manager->flush();
         }
-        
-
         return $this->redirectToRoute("show_panier");
     }
 

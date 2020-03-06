@@ -39,7 +39,7 @@
                                 <td class="col-sm-1 col-md-1 text-center"><strong>{{ panier.produit.price }} &euro;</strong></td>
                                 <td class="col-sm-1 col-md-1">
                                 <a href="{{ path('delete_panier', {'id': panier.id}) }}" ><button  type="button" class="btn btn-danger">
-                                    <span class="glyphicon glyphicon-remove"></span> Remove
+                                    <span class="glyphicon glyphicon-remove"></span> 
                                 </button></td></a>
                             </tr>
                         {% endfor %}
@@ -75,7 +75,7 @@
                                 </button></a></td>
                                 <td>
                                 <button type="button" class="btn btn-success">
-                                    Checkout <span class="glyphicon glyphicon-play"></span>
+                                    Valider mon panier <span class="glyphicon glyphicon-play"></span>
                                 </button></td>
                             </tr>
                         </tbody>

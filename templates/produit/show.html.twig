@@ -3,26 +3,28 @@
 {% block title %}Produit{% endblock %}
 
 {% block body %}
-    <div class='text-center bg-2 container-fluid'>
-        <div class='bg-3'>
-        <h1>Produit : {{ produit.libelle }}</h1>
+    <div class='text-center bg-2 container-fluid '>
 
-        <small>Prix : {{ produit.price }} &euro;</small>
-        
-        <p><img src="{{ asset(produit.img) }}"></p>
+        <div class='bg-3 '>
 
-        <div class='show-action'>
+            <article class="animScale">
+                <h1>Produit : {{ produit.libelle }}</h1>
+                <small>Prix : {{ produit.price }} &euro;</small>
+                <p><img src="{{ asset(produit.img) }}"></p>
+    
+                <div class='show-action'>
+                    <div class='group-action'>
+                        <a class="btn btn-info" href="{{ path('produit_index') }}">back to list</a>
+                    </div>
+    
+                    <div class='group-action'>
+                        <a class="btn btn-primary" href="{{ path('produit_edit', {'id': produit.id}) }}">edit</a>
+                    </div>
+                    {{ include('produit/_delete_form.html.twig') }}
+                </div> 
+            </article>
 
-            <div class='group-action'>
-                <a class="btn btn-info" href="{{ path('produit_index') }}">back to list</a>
-            </div>
+        </div>
 
-            <div class='group-action'>
-                <a class="btn btn-primary" href="{{ path('produit_edit', {'id': produit.id}) }}">edit</a>
-            </div>
-
-            {{ include('produit/_delete_form.html.twig') }}
-    </div> 
     </div>
-</div>
 {% endblock %}

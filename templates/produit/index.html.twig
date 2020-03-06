@@ -3,36 +3,34 @@
 {% block title %}Produit index{% endblock %}
 
 {% block body %}
-    <div class='bg-2'>
-        <div class="container-fluid bg-2 text-center">
+    <div class='bg-2' id="pagepiling">
+
+            <div class='header section' id="section1">
+                <h1 class='animScale'>Découvrez notre gamme de produits</h1>
+            </div>
+
+            <div class="row produit text-center section" id="section2" >
+                {% for produit in produits %}
+                    <div class="col-sm-4 bg-3 " data-aos="zoom-in" >
+                        <h2>{{ produit.libelle }}</h2>
+                        <p><img src="{{ asset(produit.img) }}"></p>
+                        <p> Prix : {{ produit.price }} &euro; </p>
+                        <p>
+                            <a class="btn btn-primary" href="{{ path('produit_show', {'id': produit.id}) }}">show</a>
+                            <a class="btn btn-info" href="{{ path('produit_edit', {'id': produit.id}) }}">edit</a>
+                            {% if app.user %}
+                                <a class="btn btn-success" href="{{ path('panier', {'id': produit.id}) }}">Add panier
+                                    {# <button type='submit'></button> #}
+                                </a>
+                            {% endif %}       
+                        </p>
+                    </div>
+                {% else %}
+                    <p> no records found </p>
+                {% endfor %}
+            <h1><a class="btn btn-success " href="{{ path('produit_new') }}">Create new</a></h1>
+            </div>
+
        
-            <h1>Découvrez notre gamme de produits</h1><br>
-                <div class="row produit">
-                    {% for produit in produits %}
-                        <div class="col-sm-4 bg-3  ">
-                            <h2>{{ produit.libelle }}</h2>
-                            <p><img src="{{ asset(produit.img) }}"></p>
-                            <p> Prix : {{ produit.price }} &euro; </p>
-                            <p>
-                                <a class="btn btn-primary" href="{{ path('produit_show', {'id': produit.id}) }}">show</a>
-                                <a class="btn btn-info" href="{{ path('produit_edit', {'id': produit.id}) }}">edit</a>
-                                {% if app.user %}
-                                    <a class="btn btn-success" href="{{ path('panier', {'id': produit.id}) }}">Add panier
-                                        <button type='submit'></button>
-                                    </a>
-                                {% endif %}
-                                
-                                   
-                                   
-                                    
-                                
-                            </p>
-                        </div>
-                    {% else %}
-                        <p> no records found </p>
-                    {% endfor %}
-                </div>
-            <h1><a class="btn btn-success" href="{{ path('produit_new') }}">Create new</a></h1>
-        </div>
     </div>
 {% endblock %}

@@ -3,19 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-        
-            <!-- <base href="http://localhost/PHP/include/ppj/"> -->
-            <!-- Theme Made By www.w3schools.com - No Copyright -->
-           
+        {% block stylesheets %}   
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Jquery -->
+            <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+            <!-- Bootstrap -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <!-- Style css -->
             <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-        
+            <!-- Aos Animation -->
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <!-- scrolling -->
+            {# <link rel="stylesheet" href="{{ asset('assets/css/jquery.pagepiling.css') }}" />
+            <script src="{{ asset('assets/js/jquery.pagepiling.min.js') }}"></script> #}
+
         {% endblock %}
     </head>
     <body>
@@ -29,7 +34,26 @@
             {% include "template-parts/footer.html.twig" %}
         {% endblock %}
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+         <script>
+            AOS.init({
+                easing: 'ease-out',
+                duration: 500,
+            });
+
+            // Scrool section to section 
+            {# $(document).ready(function() {
+                $('#pagepiling').pagepiling({
+                loopTop:true,
+                loopBottom:true
+                });
+            }); #}
+
+            
+
+        </script>
+
+        {% endblock %}
 
     </body>
 </html>
